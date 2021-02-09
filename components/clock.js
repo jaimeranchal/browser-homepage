@@ -45,15 +45,15 @@ function showToday() {
     var month = today.getMonth();
     var date = clock.getElementsByClassName('date')[0];
 
-    if (day == 1) {
-        day = day + 'st';
-    } else if (day == 2) {
-        day = day + 'nd';
-    } else if (day == 3) {
-        day = day + 'rd';
-    } else {
-        day = day + 'th';
-    }
+    // if (day == 1) {
+    //     day = day + 'st';
+    // } else if (day == 2) {
+    //     day = day + 'nd';
+    // } else if (day == 3) {
+    //     day = day + 'rd';
+    // } else {
+    //     day = day + 'th';
+    // }
 
-    date.innerHTML = days[day_name] + ' <span style="font-weight:300"> | </span>' + day + ' ' + monthNames[month];
+    date.innerHTML = days[day_name] + ' <span style="font-weight:300"> | </span>' + day + ' de ' + monthNames[month];
 }

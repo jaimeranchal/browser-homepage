@@ -4,10 +4,10 @@
 // When new tab is opened it starts with current month (month = 0)
 // For changing months we are using global_calendar_counter variable
 
-var monthNames = ["January", "February", "March", "April", "May", "June",
-    "July", "August", "September", "October", "November", "December"
+var monthNames = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
+    "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"
 ];
-var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+var days = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
 
 // GENERATE CALENDAR based on n number;
 function generateCalendar(n) {
@@ -39,16 +39,16 @@ function generateCalendar(n) {
     days_current_month = new Date(current_year, current_month + 1, 0).getDate();
 
     // first day in current month [note current_month-1 to get correct date]
-    // getDay returns day in the week (starting with sunday -> see days variable above)
+    // getDay returns day in the week (starting with Domingo -> see days variable above)
     first_day = new Date(current_year, current_month, 1).getDay();
-    // possible to change to Sunday or whatever day you want
-    week_starting_with = 'Monday';
+    // possible to change to Domingo or whatever day you want
+    week_starting_with = 'Lunes';
 
     // how many days of the previous month to show in calendar before number 1 (current month)
     starting_day = days.indexOf(week_starting_with);
     fill_with_previous_month = first_day - starting_day;
 
-    // if first_day == 0 (sunday) -> sunday is the last day
+    // if first_day == 0 (Domingo) -> Domingo is the last day
     if (fill_with_previous_month < 0) {
         fill_with_previous_month = 7 - starting_day;
     }
